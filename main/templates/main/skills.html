@@ -1,0 +1,116 @@
+{% load static %}
+
+<section id="skills" class="section-title mt-3">
+    <div id="about" class="container m-auto shadow-lg p-3 mb-5 bg-white rounded">
+
+    <h2 class="card-header display-3 text-center ">Skills</h2>
+    <br>
+         <div class="container z-depth-5">
+              <h2 class="mt-3 ">Programming</h2>
+
+                <hr class="badge-primary mt-0 w-25">
+
+                {% for skil in skills %}
+                <p class="d-inline"> {{ skil.title }}  </p>
+
+                 <div class="progress" style="height:18px">
+                 <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                aria-valuemin="0" aria-valuemax="100" style="width:{{ skil.Percentage }}%">
+                 
+                </div>
+              </div>
+              <br>
+              {% endfor %}
+              
+              
+
+              
+
+
+               <h2 class="mt-3 ">FrameWorks</h2>
+
+                <hr class="badge-primary mt-0 w-25">
+
+                <p class="d-inline">Bootsrap</p>
+                <div class="progress " style="height:18px">
+                    <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                        
+                    </div>
+                   </div>
+                   <br >
+
+
+                <p class="d-inline">Django</p>
+                <div class="progress " style="height:18px">
+                    <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:55%">
+                        
+                    </div>
+                   </div>
+                   <br >
+
+               <p class="d-inline">Android studio</p>
+                <div class="progress " style="height:18px">
+                    <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:15%">
+                        
+                    </div>
+                   </div>
+                   <br >
+
+                   <h2 class="mt-3 ">Artificial Intelligence</h2>
+
+                <hr class="badge-primary mt-0 w-25">
+
+                <p class="d-inline">Numpy</p>
+                <div class="progress " style="height:18px">
+                    <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:65%">
+                        
+                    </div>
+                   </div>
+                   <br >
+
+                   <p class="d-inline">Matplotlib </p>
+                <div class="progress " style="height:18px">
+                    <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:55%">
+                        
+                    </div>
+                   </div>
+                   <br >
+                   <p class="d-inline">Pandas</p>
+                <div class="progress " style="height:18px">
+                    <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:45%">
+                        
+                    </div>
+                   </div>
+                   <br >
+
+                   <p class="d-inline">TenserFlow</p>
+                <div class="progress " style="height:18px">
+                    <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                    aria-valuemin="0" aria-valuemax="100" style="width:18%">
+                        
+                    </div>
+                   </div>
+                   <br >
+                   
+                   <p class="d-inline">Azure ML studio</p>
+                   <div class="progress " style="height:18px">
+                       <div class="progress-bar  bg-info" role="progressbar" aria-valuenow="40"
+                       aria-valuemin="0" aria-valuemax="100" style="width:7%">
+                           
+                       </div>
+                      </div>
+                      <br >
+                      
+
+                 
+        </div>
+
+        </div>
+  </section>
+

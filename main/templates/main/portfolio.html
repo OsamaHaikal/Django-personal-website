@@ -1,0 +1,48 @@
+
+{% load static %} <section class="py-5">
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <h1 class="text-center mb-4">PORTFOLIO</h1>
+            <hr class="badge-primary mt-0 w-25 mx-auto">
+
+
+            <!---------- Projects  ------------>
+            <div class="filtr-controls bg-light shadow-sm  text-center lead text-uppercase mb-3">
+
+                            <span id="cat" class="active d-inline-block mx-3 py-1 position-relative" data-filter="all">all </span>
+
+                            <span class="d-inline-block mx-3 py-1 position-relative" data-filter="Projects">Projects </span>
+
+                            <span class="d-inline-block mx-3 py-1 position-relative"data-filter="Courses">Courses </span>
+
+                            <span class="d-inline-block mx-3 py-1 position-relative" data-filter="Papers">Papers </span>
+            </div>
+
+            <div class="row filtr-container">
+
+                {% for portfolio in portfolios %}
+ 
+                <div class="col-lg-4 col-md-6 filtr-item" data-category="{{ portfolio.category }}">
+                    <div class="card border-dark shadow-lg">
+                        <img  src="{{ portfolio.image.url }} " id="card-image" class="img-fluid card-img w-100 d-block rounded-0">
+                        <div class="card-body">
+                            <h4 class="card-text text-center">{{ portfolio.title }}</h4>
+
+
+                            <small class="m-2 text-muted text-center">{{ portfolio.description|safe }}</small>
+
+                        </div>
+                        <div class="d-flex justify-content-center card-footer"><a target="_blank" href="{{ portfolio.url }}"><button class="btn btn-primary btn-sm" type="button"><i class="fa fa-eye"></i>&nbsp; {{ portfolio.btn }}</button></a></div>
+                    </div>
+                </div>
+
+
+                 {% endfor %}
+
+            
+
+            </div>
+               
+        </div>
+      
+    </section>

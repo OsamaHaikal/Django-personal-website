@@ -1,0 +1,41 @@
+<section id="contact" class="container">
+    <h1 class="text-center mb-4">Get in touch</h1>
+    <hr class="badge-primary mt-0 w-25 mx-auto">
+<h1>{{ a }}</h1>
+<form action="" method="POST" role="form" enctype="multipart/form-data"> 
+    {% csrf_token %}
+
+    <div class="col-6-md col-4-sm">
+
+        <div class="form-group">
+            <label for="id_name">Name </label>
+            <input class="form-control form-control-lg"type="text" name="name" maxlength="100" required id="id_name" placeholder="Enter email">
+        </div> 
+               
+    </div>
+
+    <div class="col-6-md col-4-sm">
+
+            <div class="form-group">
+                        <label for="id_email">Email</label>
+                    
+                        <input class="form-control"  type="email" name="email" maxlength="100" required id="id_email" placeholder="Enter subject">
+                        <small class="form-text text-muted">Your email will not ever be shared</small>
+
+                    </div>
+    </div>
+   
+
+    <div class="col-6-md col-4-sm">
+
+        <div class="form-group">
+            <label for="id_Message">Message</label>
+            <textarea class="form-control"class="form-control" name="message" rows="5" maxlength="500" required id="id_Message"></textarea>
+        </div>
+    </div>
+
+<input value="submit" type="submit" class="btn btn-primary" >
+   
+</form> 
+
+</section>

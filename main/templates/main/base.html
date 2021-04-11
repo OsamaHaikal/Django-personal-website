@@ -1,0 +1,133 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osama Haikal</title>
+    <link rel = "icon" type = "image/png" href = "{% static 'main/images/logo.png' %}">
+
+    <meta content="Personal website using django and bootsrap" name="description">
+    <meta content="Osama Haikal" name="keywords">
+<!--  css fles-->
+
+        <!--bootsrap css files-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+        <!--bootsrap css files-->
+        <!--Main css -->
+        <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    
+<!-- Font Awesome -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+  rel="stylesheet"
+/>
+<!-- Google Fonts -->
+<link
+  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+  rel="stylesheet"
+/>
+<!-- MDB -->
+<link
+  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+  rel="stylesheet"
+/>
+    
+    <!--  css fles-->
+
+</head>
+<body id="main-page" data-spy="scroll" data-target="#main-nav" data-offset="1">
+<!-- start  navbar section   -->
+
+<header class="main-header">
+    {% include 'main/navbar.html' %}
+    {% include 'main/header.html' %}
+</header>   
+<!-- end  navbar section   -->
+
+
+<!-- start  about section   -->
+{% include 'main/about.html' %}
+<!-- end  about section   -->
+
+<!--  strat skills section   -->
+
+{% include 'main/skills.html' %}
+<!-- end  skills section   -->
+
+<!--  start portfolio section   -->
+
+{% include 'main/portfolio.html' %}
+
+<!-- end  portfolio section   -->
+
+<!-- start  contact section   -->
+
+{% include 'main/contact.html' %}
+<!-- end  contact section   -->
+
+
+<!--start   footer section   -->
+
+{% include 'main/footer.html' %}
+<!-- end  footer section   -->
+
+
+<button id="btnScroll"  class="btn btn-dark d-flex justify-content-center" href=""><i class="fa fa-arrow-up align-self-center" aria-hidden="true"></i>
+</button>
+
+   
+       <!-- js fles-->
+               <!-- bootsrap js files-->
+               <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+               crossorigin="anonymous"></script>
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+               crossorigin="anonymous"></script>
+           <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+               crossorigin="anonymous"></script>            <!-- bootsrap js files-->
+            <script src="{% static 'main/vendor/typed.js-master/typed.js-master/lib/typed.min.js' %}"></script>
+
+       <!-- js fles-->
+         <!-- MDB -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js">
+</script>
+        <script src="{% static 'main/js/main.js' %}"></script>
+
+<script>
+        
+var typed = new Typed('#typed',{
+                    stringsElement: '#typed-strings',
+                    backSpeed: 40,
+                    typeSpeed: 40,
+                    loop:true,
+                  });
+
+//Get the button:
+mybutton = document.getElementById("btnScroll");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop >20 || document.documentElement.scrollTop > 30) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+               const btnScrollToTop = document.querySelector("#btnScroll");
+               btnScrollToTop.addEventListener("click",function(){
+               // window.scrollTo(0,0);
+                window.scrollTo({
+
+                    top:0,
+                    left:0,
+                    behavior:"smooth"
+                });
+               });
+
+</script>
+   </body>
+   </html>
