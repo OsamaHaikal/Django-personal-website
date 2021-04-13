@@ -136,3 +136,9 @@ EMAIL_HOST_USER='ee.osamahaikal@gmail.com'
 EMAIL_HOST_PASSWORD=''
 
 DEFAULT_FROM_EMAIL = 'default from email' """
+
+try :
+    from .local_settings import *
+except ImportError :
+    print("Looks like no local file . You must be on production")
+        
